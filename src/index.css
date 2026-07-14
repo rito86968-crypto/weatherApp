@@ -1,0 +1,93 @@
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .topContent {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .searcher {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .searcher input {
+        width: 100%;
+    }
+
+    .buttonPerformance {
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .actualWeather {
+        width: auto;
+        height: auto;
+    }
+
+    .topActualWeather {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .topActualWeather div {
+        align-items: flex-start;
+    }
+
+    .midActualWeather,
+    .bottomActualWeather {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .customCities {
+        width: auto;
+    }
+
+    .dayForecast {
+        width: auto;
+    }
+
+    .dayForecast li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .fullLine {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .midLine {
+        margin-right: 0;
+    }
+
+    .endLine {
+        width: 100%;
+    }
+
+    .lineTemp {
+        flex: 1;
+        max-width: none;
+    }
+
+    .hourlyWeather {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .hourlyWeather::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hourlyWeather li {
+        min-width: 90px;
+    }
+}
