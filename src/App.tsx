@@ -58,8 +58,6 @@ function App() {
   const [search, setSearch] = useState("Barcelona");
   const [forecast, setForecast] = useState<Forecast | null>(null);
   const [weather, setWeather] = useState<Weather | null>(null);
-  const now = new Date();
-  const hour = now.getHours();
   const [cities, setCities] = useState<CityWeather[]>([]);
 
 
@@ -202,7 +200,7 @@ function App() {
                   <p>{weather?.weather[0].main}</p>
                 </div>
                 <div>
-                  <img className='windIcon0120' src="wind.png" alt=""></img>
+                  <img className='windIcon' src="wind.png" alt=""></img>
                   <h2>{weather?.wind.speed} {unit === 'metric' ? "mph" : "m/s"}</h2>
                 </div>
               </div>

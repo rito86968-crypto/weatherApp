@@ -106,19 +106,20 @@ body {
 
 .midTopContent {
   display: flex;
-  margin: 0 0 48px;
+  margin: 0 0 48px 0;
   gap: 44px;
 }
 
 .actualWeather {
   display: flex;
   flex-direction: column;
-  padding: 24px 20px;
+  padding: 24px 20px 24px 20px;
   border-radius: 12px;
   background-color: #20293A;
   gap: 12px;
   width: 350px;
   height: 150px;
+  padding-bottom: 24px;
 }
 
 .topActualWeather,
@@ -193,7 +194,7 @@ body {
   font-size: 0.75rem;
   font-family: "Outfit", sans-serif;
   color: #F2F5F9;
-  font-weight: normal
+  font-weight: normal;
 }
 
 .hourlyWeather {

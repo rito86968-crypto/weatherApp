@@ -9,7 +9,7 @@ type Props = {
     setSearch: React.Dispatch<React.SetStateAction<string>>;
 };
 
-function TopContent({ unit, setUnit, city, setCity, search, setSearch }: Props) {
+function TopContent({ unit, setUnit, setCity, search, setSearch }: Props) {
     return (
         <div className="topContent">
             <div className="searcher">
