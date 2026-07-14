@@ -11,40 +11,42 @@ type Props = {
 
 function TopContent({ unit, setUnit, setCity, search, setSearch }: Props) {
     return (
-        <div className="topContent">
-            <div className="searcher">
-                <img src="/Search.svg" />
-                <input
-                    type="text"
-                    placeholder="Search city..."
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    onKeyDown={(e) => {
-                        if (e.key === "Enter") {
-                            setCity(search);
+        <main>
+            <div className="topContent">
+                <div className="searcher">
+                    <img src="/Search.svg" alt="" />
+                    <input
+                        type="text"
+                        placeholder="Search city..."
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter") {
+                                setCity(search);
+                            }
+                        }}
+                    />
+                </div>
+
+                <div className="buttonPerformance">
+                    <div
+                        className={`toggle ${unit === "metric" ? "metric" : "imperial"}`}
+                        onClick={() =>
+                            setUnit(unit === "metric" ? "imperial" : "metric")
                         }
-                    }}
-                />
-            </div>
+                    >
+                        <span className="UnitPlacement">
+                            <p>°C</p>
+                            <p>°F</p>
+                        </span>
 
-            <div className="buttonPerformance">
-                <div
-                    className={`toggle ${unit === "metric" ? "metric" : "imperial"}`}
-                    onClick={() =>
-                        setUnit(unit === "metric" ? "imperial" : "metric")
-                    }
-                >
-                    <span className="UnitPlacement">
-                        <p>°C</p>
-                        <p>°F</p>
-                    </span>
-
-                    <div className="circle">
-                        <p>{unit === "metric" ? "°F" : "°C"}</p>
+                        <div className="circle">
+                            <p>{unit === "metric" ? "°F" : "°C"}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }
 
