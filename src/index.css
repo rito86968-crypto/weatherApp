@@ -2,15 +2,23 @@
 
 @media (max-width: 768px) {
 
+    .container {
+        padding: 0 16px;
+    }
+
     .topContent {
         flex-direction: column;
-        gap: 20px;
+        gap: 18px;
         align-items: stretch;
+        margin: 24px 0;
     }
 
     .searcher {
         width: 100%;
         box-sizing: border-box;
+        justify-content: space-between;
+        padding: 14px 16px;
+        border-radius: 24px;
     }
 
     .searcher input {
@@ -18,69 +26,58 @@
     }
 
     .buttonPerformance {
+        width: 100%;
         margin-right: 0;
-        justify-content: center;
+        justify-content: flex-end;
+    }
+
+    .midTopContent {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .actualWeather {
-        width: auto;
-        height: auto;
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+        padding: 24px 20px;
     }
 
     .topActualWeather {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 12px;
     }
 
     .topActualWeather div {
         align-items: flex-start;
+        width: 100%;
     }
 
     .midActualWeather,
     .bottomActualWeather {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 12px;
     }
 
-    .customCities {
-        width: auto;
-    }
-
-    .dayForecast {
-        width: auto;
-    }
-
-    .dayForecast li {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .fullLine {
+    .midActualWeather div {
         width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .bottomActualWeather {
         gap: 10px;
-    }
-
-    .midLine {
-        margin-right: 0;
-    }
-
-    .endLine {
-        width: 100%;
-    }
-
-    .lineTemp {
-        flex: 1;
-        max-width: none;
     }
 
     .hourlyWeather {
-        overflow-x: auto;
-        flex-wrap: nowrap;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+        padding-bottom: 4px;
+        margin-bottom: 0;
     }
 
     .hourlyWeather::-webkit-scrollbar {
@@ -88,6 +85,100 @@
     }
 
     .hourlyWeather li {
-        min-width: 90px;
+        flex: 1 1 calc(33.33% - 12px);
+        min-width: 104px;
+        max-width: 110px;
+        padding: 18px 12px;
+        border-radius: 20px;
+    }
+
+    .midBottomContent {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .largeCities {
+        width: 100%;
+    }
+
+    .customCities {
+        width: 100%;
+        padding: 18px;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .cC2 {
+        width: 100%;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .cC2 img {
+        margin-right: 12px;
+    }
+
+    .semanalForecast {
+        width: 100%;
+        gap: 14px;
+    }
+
+    .semanalForecast p {
+        margin-bottom: 12px;
+    }
+
+    .dayForecast {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .dayForecast li {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        padding: 1rem;
+        border-radius: 20px;
+    }
+
+    .dayForecast li p {
+        margin: 0;
+    }
+
+    .fullLine {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .midLine {
+        margin-right: 0;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .endLine {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .lineTemp {
+        flex: 1;
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .lineTempBar {
+        width: auto;
+    }
+
+    .endLine span {
+        display: block;
     }
 }
