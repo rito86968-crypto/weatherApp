@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("/earth.png");
+  background-color: #030616;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+.topContent {
+  display: flex;
+  justify-content: space-between;
+  margin: 28px 0 36px;
+  align-items: center;
+}
+
+.searcher {
+  padding: 8px;
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #20293A;
+}
+
+.searcher img {
+  height: 25px;
+  width: 25px;
+}
+
+.searcher input {
+  background-color: transparent;
+  color: #F2F5F9;
+  border: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+}
+
+.buttonPerformance {
+  display: flex;
+  align-items: center;
+  margin-right: -90px;
+}
+
+
+.toggle {
+  padding: 8px;
+  width: 55px;
+  height: 23px;
+  background: #20293A;
+  border-radius: 999px;
+  cursor: pointer;
+  position: relative;
+}
+
+.circle {
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle.metric {
+  background: #20293A;
+}
+
+.toggle.metric .circle {
+  left: 34px;
+}
+
+.UnitPlacement {
+  justify-content: center;
+  position: absolute;
+  gap: 17px;
+  display: flex;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  color: #F2F5F9;
+  font-weight: bold;
+}
+
+.circle p {
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  color: #030616;
+  font-weight: bold;
+}
+
+.midTopContent {
+  display: flex;
+  margin: 0 0 48px;
+  gap: 44px;
+}
+
+.actualWeather {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px;
+  border-radius: 12px;
+  background-color: #20293A;
+  gap: 12px;
+  width: 350px;
+  height: 150px;
+}
+
+.topActualWeather,
+.midActualWeather,
+.bottomActualWeather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topActualWeather p {
+  font-family: "Outfit", sans-serif;
+  font-size: 3.7rem;
+  color: #F2F5F9;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.topActualWeather div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+}
+
+.topActualWeather h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  color: #F2F5F9;
+  font-weight: 400;
+}
+
+.topActualWeather h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.875rem;
+  color: #F2F5F9;
+  font-weight: 400;
+}
+
+.weatherIcon {
+  width: 36px;
+  height: 36px;
+}
+
+.windIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.midActualWeather h2 {
+  font-size: 1rem;
+  font-family: "Outfit", sans-serif;
+  color: #F2F5F9;
+  font-weight: 400
+}
+
+.midActualWeather div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+}
+
+.midActualWeather p {
+  font-size: 0.625rem;
+  font-family: "Outfit", sans-serif;
+  color: #c8ccd1;
+}
+
+.bottomActualWeather div,
+.bottomActualWeather p {
+  font-size: 0.75rem;
+  font-family: "Outfit", sans-serif;
+  color: #F2F5F9;
+  font-weight: normal
+}
+
+.hourlyWeather {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hourlyWeather li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  flex: 1;
+  background: #20293A;
+  border-radius: 15px;
+  padding: 16px 8px;
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hourlyWeather li h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.8rem;
+  color: #F2F5F9;
+  font-weight: bold;
+}
+
+.hourlyWeather img {
+  height: 36px;
+  width: 36px;
+}
+
+.hourlyWeather li p {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.875rem;
+  color: #F2F5F9;
+  font-weight: 400;
+}
+
+.hourlyWeather li hr {
+  width: 60px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.hourlyWeather li h3 {
+  font-size: 0.625rem;
+  font-family: "Outfit", sans-serif;
+  color: #c8ccd1;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.midBottomContent {
+  display: flex;
+  gap: 44px;
+}
+
+.largeCities {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.largeCities p {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  color: #F2F5F9;
+  font-weight: 400;
+}
+
+.customCities {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: #20293A;
+  padding: 20px;
+  width: 320px;
+}
+
+.cC1 h1 {
+  margin-top: 4px;
+  margin-bottom: 12px;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  color: #F2F5F9;
+  font-weight: 400;
+}
+
+.cC1 h2 {
+  font-family: "Outfit", sans-serif;
+  color: #c8ccd1;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.cC1 p {
+  font-size: 0.75rem;
+  font-family: "Outfit", sans-serif;
+  color: #c8ccd1;
+}
+
+
+.cC2 h1 {
+  padding: 12px;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.8rem;
+  color: #F2F5F9;
+  font-weight: 400;
+}
+
+.cC2 img {
+  height: 40px;
+  width: 40px;
+}
+
+.cC1,
+.cC2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cC2 {
+  align-items: center;
+}
+
+.semanalForecast p {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  color: #F2F5F9;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.semanalForecast {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dayForecast {
+  display: flex;
+  background-color: #20293A;
+  border-radius: 1rem;
+  justify-content: space-between;
+  width: 51rem;
+  align-items: center;
+}
+
+.dayForecast li {
+  display: flex;
+  align-items: center;
+  padding: .75rem 1.25rem;
+  border-radius: 1rem;
+  background-color: #20293A;
+  justify-content: space-between;
+}
+
+.dayForecast li p {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  color: #F2F5F9;
+  font-weight: 400;
+  margin: auto 80px auto auto;
+}
+
+.lineTemp {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 410px;
+  height: 6px;
+  background: #030616;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.lineTempBar {
+  position: absolute;
+  height: 100%;
+  background: #4E80EE;
+  border-radius: 1rem;
+}
+
+.midLine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 80px;
+}
+
+.midLine h3 {
+  font-size: 0.75rem;
+  font-family: "Outfit", sans-serif;
+  color: #c8ccd1;
+  font-weight: 400;
+}
+
+.midLine img {
+  height: 40px;
+  width: 40px;
+}
+
+.endLine,
+.fullLine {
+  display: flex;
+  align-items: center;
+}
+
+.endLine span {
+  font-size: 1rem;
+  font-family: "Outfit", sans-serif;
+  color: #F2F5F9;
+  font-weight: 400;
+}
+
+.endLine {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
